@@ -17,7 +17,7 @@ contract DStorage {
         address payable uploader;
     }
 
-    //event
+    //event to be subscribed to
 
     event FileUploaded(
         uint fileId,
@@ -32,6 +32,7 @@ contract DStorage {
 
     constructor() public {}
 
+  // with restrictions to ensure it is used well
     function uploadFile(
         string memory _fileHash,
         uint _fileSize,
