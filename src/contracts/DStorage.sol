@@ -1,11 +1,11 @@
 pragma solidity ^0.5.0;
 
 contract DStorage {
-    string public name = "DStorage"; // Number of files
-    // Mapping fileId=>Struct
+    string public name = "DStorage";
+    uint public fileCount = 0;
     mapping(uint => File) public files;
 
-    // Struct for defining a file
+  //struct for a file structure
     struct File {
         uint fileId;
         string fileHash;
@@ -17,7 +17,8 @@ contract DStorage {
         address payable uploader;
     }
 
-    // Event
+    //event
+
     event FileUploaded(
         uint fileId,
         string fileHash,
